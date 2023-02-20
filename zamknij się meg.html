@@ -39,6 +39,36 @@
 				transition: 1s;
 			}
 
+            main {
+                width: 500px;
+                height: 500px;
+                margin: 20px;
+                background: #3e3e3e17;
+                padding: 20px;
+                position: absolute;
+                top: 500px;
+				border-radius: 20px;
+            }
+
+			main img {
+				width: 500px;
+				border-radius: 20px;
+				margin: 20px;
+				cursor:grab;
+				filter:grayscale(100);
+			}
+
+			
+
+            .notAllowed {
+				position: absolute;
+				top: 90px;
+				width: 450px;
+				opacity: 0.5;
+				
+				right: 0px;
+            }
+
 		</style>
 	</head>
 	
@@ -47,6 +77,13 @@
 		<img class="piotrGryf hidden" src="https://i0.wp.com/witchdoctor.co.nz/wp-content/uploads/2017/06/tumblr_mkhs5tjQy51r1mr1po1_500.gif" alt="DA BIRD IS DA WORD!"/>
 		<img class="piotrGryf img1" src="https://th.bing.com/th/id/R.57678c8707d08d05a40cb83091361844?rik=Chn7Z%2fAIm3YDJA&pid=ImgRaw&r=0" alt="piotrek grifindor aka PUMPKINEATER69"/>
 		
+
+		<main>
+			<h3> Jej nie lubimy 😡</h3>
+			<img src="https://cdna.artstation.com/p/assets/images/images/027/557/646/large/pete-gtk-rabczuk-faimly-guy-megv001.jpg?1591876577" />
+			<img class="notAllowed" src="https://www.clipartmax.com/png/full/16-160491_clipart-not-allowed-anti-symbol-clip-art-at-clker-vector-mobile-phone.png" />
+		</main>
+
 		<script>
 			const Piotrki = document.querySelectorAll('.piotrGryf');
             const zamknijSieMegText = document.querySelector('#zamknijSieMegText');
@@ -75,7 +112,6 @@
 
 				}); 
 			}
-
 			
 		</script>
 	</body>

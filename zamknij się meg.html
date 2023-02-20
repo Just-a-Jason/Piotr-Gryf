@@ -1,0 +1,78 @@
+<html>	
+	<head>
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+			
+			body {
+				font-family: 'Oswald', sans-serif;
+				display: flex;
+				justify-content: center;
+				flex-direction: column;
+				align-items: center;
+			}
+
+			.piotrGryf {
+				cursor: pointer;
+				width: 200px;
+				transition: 1s;
+				filter:drop-shadow( 1px 1px  20px #000);
+			}
+
+			.img1 {
+				position: absolute;			
+				top: 90px;
+			}
+
+			.hidden {
+				opacity: 0;
+			}
+
+			.animacja {
+				letter-spacing: 5px;
+				color: #f00;
+			}
+
+			h1 {
+				transition: 1s;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<h1 id="zamknijSieMegText"> Zamknij się meg </h1>
+		<img class="piotrGryf hidden" src="https://i0.wp.com/witchdoctor.co.nz/wp-content/uploads/2017/06/tumblr_mkhs5tjQy51r1mr1po1_500.gif" alt="DA BIRD IS DA WORD!"/>
+		<img class="piotrGryf img1" src="https://th.bing.com/th/id/R.57678c8707d08d05a40cb83091361844?rik=Chn7Z%2fAIm3YDJA&pid=ImgRaw&r=0" alt="piotrek grifindor aka PUMPKINEATER69"/>
+		
+		<script>
+			const Piotrki = document.querySelectorAll('.piotrGryf');
+            const zamknijSieMegText = document.querySelector('#zamknijSieMegText');
+
+			let piotrekGryf = 0;
+			
+			for (let piotr of Piotrki) {
+				piotr.addEventListener('click', () => {
+                    piotrekGryf++;
+					piotrekGryf = piotrekGryf % Piotrki.length;
+					Piotrki[piotrekGryf].classList.toggle('hidden');
+
+					const tekstyPiotrka = [
+						"Zamknij się meg",
+						"I hate N*****"
+					];
+
+                    zamknijSieMegText.classList.toggle('animacja');
+					zamknijSieMegText.innerHTML = tekstyPiotrka[piotrekGryf]; 
+
+					if (piotrekGryf == 0) {
+						Piotrki[1].classList.toggle('hidden');
+						return;
+					}
+						Piotrki[0].classList.toggle('hidden');
+
+				}); 
+			}
+
+			
+		</script>
+	</body>
+</html>
